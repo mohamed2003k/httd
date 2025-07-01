@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    ---green-500:hsl(158, 36%, 37%);
+    ---green-700:hsl(158, 42%, 18%);
+    ---black:hsl(212, 21%, 14%);
+    ---black-grey:hsl(228, 12%, 48%);
+    ---cream:hsl(30, 38%, 92%);
+}
+body{
+    background-color: var(---cream);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;;
+    
+}
+.main{
+    font-family: "Montserrat", sans-serif;
+    /**/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin: 1rem;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main img{
+    display: block;
+    width: 100%;
+    border-radius: 10px 0  0 10px ;
+}
+.contant{
+    padding:2rem ;
+    border-radius: 0 10px 10px 0 ;
+    background-color: white;
+}
+.contant .category{
+    color:var(---black-grey);
+    letter-spacing: 6px;
+    font-size:12px;
+}
+.contant h1{
+    font-family: "Fraunces", serif;
+    margin:20px 0;
+    line-height: 1;
+}
+.contant p{
+    font-size: 14px;
+    line-height:1.6;
+    color:var(---black-grey);
+    font-weight: 500;
+}
+.contant .price{
+    margin: 18px 0;
+    display: flex;
+    align-items: center;
+}
+.contant .price .discount{
+    font-size: 32px;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color:var(---green-500);
+    margin-right: 20px;
+}
+.btn{
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(---green-500);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.btn::before{
+    content: url(images/icon-cart.svg);
+    padding-right: 10px;
+}
+.btn:hover{
+    background-color: var(---green-700);
+}
+@media (max-width: 700px){
+     .main{
+         grid-template-columns: 1fr;
+     }
+     .main img{
+         border-radius:10px 10px 0 0;
+     }
+     .contant{
+         border-radius: 0 0 10px 10px;
+     }
+}
+
